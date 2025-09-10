@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MainScenes/HomeScene.unity
+    guid: 707fa6761599a403d87678c3b41d9fa3
+  - enabled: 1
+    path: Assets/Scenes/CustomHandPose.unity
+    guid: c0c576a33a4bf49f5ba288bbefcaf6f5
+  - enabled: 1
+    path: Assets/MainScenes/ClubTemptScene.unity
+    guid: 691577a3b8ece4eecbdcde4ef38adebb
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2e2aad37263e64392a6b39ae8071ac23,
+      type: 2}
