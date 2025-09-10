@@ -4,7 +4,7 @@ A comprehensive VR reading assistance application designed for Meta Quest standa
 
 ## 🎯 Project Overview
 
-The Reading Aid App is a personal project developed for the Meta Quest store that combines immersive VR technology with advanced reading analytics. The application provides real-time reading assistance through gaze tracking, interactive text manipulation, and comprehensive assessment reporting for educational purposes.
+The Reading Aid App is a personal project developed for the Meta Quest Pro that combines immersive VR technology with advanced reading analytics. The application provides real-time reading assistance through gaze tracking, interactive text manipulation, and comprehensive assessment reporting for educational purposes.
 
 ## 🚀 Key Features
 
