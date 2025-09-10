@@ -1,96 +1,133 @@
-# Reading Aid App
+# Smoking Cessation VR Experience
 
-A comprehensive VR reading assistance application designed for Meta Quest standalone devices, featuring eye-tracking analysis, interactive text highlighting, and educational assessment tools.
+A comprehensive virtual reality application designed for Meta Quest standalone devices that provides an immersive educational experience about the health effects of smoking. This project combines interactive 3D environments, realistic physics simulations, and educational content to help users understand the impact of smoking on their health.
 
 ## 🎯 Project Overview
 
-The Reading Aid App is a personal project developed for the Meta Quest Pro that combines immersive VR technology with advanced reading analytics. The application provides real-time reading assistance through gaze tracking, interactive text manipulation, and comprehensive assessment reporting for educational purposes.
+This VR application serves as an educational tool that simulates the smoking experience while demonstrating its harmful effects on the human body, particularly the lungs. The experience is designed to be both informative and engaging, using realistic interactions and visual feedback to convey important health information.
 
-## 🚀 Key Features
+## ✨ Key Features
 
-### 📖 Interactive Reading Experience
-- **Gaze-Based Highlighting**: Automatic text highlighting based on user eye movement
-- **Interactive Word Selection**: Tap-to-select words for instant dictionary lookup
-- **Reading Session Management**: Comprehensive session tracking with pause/resume functionality
+### 🏠 Main Menu System
+- **Interactive Welcome Screen**: Age verification and introductory warnings
+- **Scene Navigation**: Seamless transitions between different educational modules
+- **Settings Management**: Configurable options and user preferences
+- **Fade Transitions**: Smooth visual transitions between scenes
 
-### 👁️ Eye Tracking & Analytics
-- **Pattern Recognition**: Advanced algorithms to detect reading patterns including:
-  - Fixations (focused gaze points)
-  - Regressions (backward eye movements)
-  - Saccades (rapid eye movements)
-  - Word skipping detection
-  - Reading flow analysis
-- **Visual Feedback**: Real-time visualization of eye movement patterns with colored traces
-- **Assessment Reports**: Detailed analytics on reading behavior and comprehension
+### 🚬 Interactive Smoking Simulation
+- **Realistic Physics**: Cigarette, lighter, and ashtray interactions with proper collision detection
+- **Particle Effects**: Dynamic smoke particle systems that respond to user actions
+- **Audio Feedback**: Realistic smoking sounds and breathing audio
+- **Object Manipulation**: Full VR hand tracking for natural interaction with smoking paraphernalia
 
-### 📚 Educational Tools
-- **Dictionary Integration**: Built-in dictionary with definitions, synonyms, and phonetic information
-- **Student Management**: Comprehensive student data tracking and assessment history
-- **Progress Monitoring**: Session-based progress tracking with detailed reports
-- **Instructor Dashboard**: Tools for educators to monitor student reading patterns
+### 🫁 Lung Visualization & Health Education
+- **Progressive Lung Damage**: Visual representation of lung deterioration with each simulated smoke
+- **Color Progression**: Lungs gradually darken from healthy pink to black as damage accumulates
+- **Shake Effects**: Physical feedback when lungs are affected by smoke
+- **Educational Messaging**: Clear information about the health consequences of smoking
 
-### 🎮 VR Interaction
-- **Gaze Interaction**: Eye-tracking based text selection and navigation
-- **Spatial UI**: Immersive 3D user interface optimized for VR environments
-- **Audio Feedback**: Sound effects for user interactions and system notifications
+### 🎭 Character Interactions
+- **AI-Powered Avatars**: Intelligent NPCs that respond to user presence and actions
+- **Conversation System**: Multi-stage dialogue with audio narration
+- **Navigation AI**: Characters that move and interact naturally within the environment
+- **Animation States**: Complex animation sequences that respond to user interactions
+
+### 🎵 Audio System
+- **Spatial Audio**: 3D positioned sound effects for immersive experience
+- **Dynamic Music**: Ambient background music that adapts to the scene
+- **Voice Narration**: Educational content delivered through character voices
+- **Audio Segments**: Modular audio system for flexible content delivery
 
 ## 🏗️ Technical Architecture
 
 ### Core Systems
+- **SceneController**: Singleton pattern for managing scene transitions and navigation
+- **SystemController**: Main application state management and UI coordination
+- **Audio Management**: Centralized audio system with spatial positioning
+- **Animation Controller**: State machine for character animations and interactions
 
-#### **Reading Session Controller**
-- Manages the overall reading experience
-- Handles session state (start, pause, resume, quit)
-- Coordinates between text generation and highlighting systems
-- Tracks reading time and progress
+### Interaction Systems
+- **Mouth Collider Detection**: Precise collision detection for smoking simulation
+- **Cigarette Behavior**: Realistic smoking mechanics with lighting and extinguishing
+- **Lung Color Change**: Progressive visual feedback system
+- **Navigation Script**: AI-driven character movement and interaction
 
-#### **Text Processing Pipeline**
-- **Paragraph Text Generator**: Converts text strings into interactive 3D word objects
-- **Text Positioner**: Manages spatial layout and pagination of text elements
-- **Highlight System**: Real-time text highlighting based on gaze patterns
-- **Text Controllers**: Individual word interaction and selection handling
+### UI/UX Components
+- **Canvas Controllers**: Dynamic UI management for different scenes
+- **Message System**: Text display system for educational content
+- **Button Interactions**: VR-optimized button controls and navigation
 
-#### **Data Management**
-- **Student Data Manager**: Centralized student information and assessment tracking
-- **Dictionary System**: Word lookup and definition management
-- **Pattern Recognition**: Eye movement analysis and reading pattern detection
-- **Assessment Storage**: Persistent storage of reading sessions and analytics
+## 🎮 Scenes & Environments
 
-#### **Visualization & Feedback**
-- **Feedback Visualizer**: Eye movement trace visualization
-- **UI Controllers**: Canvas management and user interface coordination
-- **Animation System**: Smooth transitions and visual effects
+### 1. Main Menu Scene
+- Welcome interface with age verification
+- Scene selection and navigation
+- Settings and configuration options
 
-### Technology Stack
-- **Unity 2022.x**: Primary development platform
-- **Meta Quest SDK**: VR platform integration
-- **Oculus Integration**: Hand tracking and eye tracking APIs
-- **TextMesh Pro**: Advanced text rendering and manipulation
-- **XR Interaction Toolkit**: VR interaction framework
+### 2. Lung Visualization Scene
+- Interactive lung model with real-time damage visualization
+- Educational content about smoking effects
+- Progressive health impact demonstration
+
+### 3. Club Cessation Scene
+- Social environment simulation
+- Character interactions and conversations
+- Educational messaging about peer pressure and social aspects
+
+### 4. Smoking Simulation Scene
+- Interactive smoking environment
+- Realistic physics and particle effects
+- Health impact visualization
+
+## 🛠️ Development Setup
+
+### Prerequisites
+- Unity 2022.3 LTS or later
+- Meta Quest Development Kit
+- Oculus Integration SDK
+- Meta Voice SDK (for voice interactions)
+
+### Installation
+1. Clone the repository
+2. Open the project in Unity
+3. Import required packages:
+   - Oculus Integration
+   - Meta Voice SDK
+   - TextMeshPro
+4. Configure build settings for Android/Quest
+5. Set up Oculus Developer account and certificates
+
+### Build Configuration
+- **Platform**: Android
+- **Target Device**: Meta Quest 2/3/Pro
+- **Graphics API**: OpenGL ES 3.0
+- **Architecture**: ARM64
 
 ## 📁 Project Structure
 
 ```
 Assets/
-├── Scripts/
-│   ├── Controllers/          # Core system controllers
-│   ├── Managers/            # Data and system managers
-│   ├── Data/               # Data structures and models
+├── Scripts/                 # Custom C# scripts
+│   ├── Core/               # Core system controllers
+│   ├── Managers/           # Scene and system managers
+│   ├── Gameplay/           # Game mechanics and interactions
+│   ├── Interaction/        # VR interaction systems
+│   ├── Audio/              # Audio management scripts
 │   ├── UI/                 # User interface components
-│   ├── Text/               # Text processing and highlighting
-│   └── Utilities/          # Helper functions and utilities
-├── Art/
-│   ├── Textures/           # Visual assets and materials
+│   └── Utility/            # Helper scripts and utilities
+├── Art/                    # Visual assets
 │   ├── Materials/          # Shader materials
 │   ├── Models/             # 3D models and meshes
-│   └── Animations/         # Animation assets
-├── Audio/
+│   ├── Textures/           # Image textures
+│   └── Animations/         # Animation controllers
+├── Audio/                  # Audio assets
 │   ├── Music/              # Background music
 │   └── SFX/                # Sound effects
-├── UI/
-│   ├── Icons/              # UI icon assets
-│   └── Sprites/            # 2D sprite assets
 ├── Prefabs/                # Reusable game objects
-├── Shaders/                # Custom shader files
-└── Resources/              # Runtime data and configurations
+├── Scenes/                 # Unity scene files
+├── UI/                     # User interface assets
+│   ├── Sprites/            # UI sprites and images
+│   └── Icons/              # Interface icons
+└── Miscellaneous/          # Additional assets and meta files
 ```
+
